@@ -1,0 +1,168 @@
+
+#outer_modal{
+    position: sticky;
+    /* position: absolute; */
+   top: 50%;
+   left: 50%;
+   min-width: 45vw;
+   width: fit-content;
+   height: fit-content;
+   transform: translate(-50%, -50%);
+   z-index: 111111111;
+   background-color: white;
+   border-radius: 8px;
+   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
+   transition: all 0.5s ease-in;
+
+}
+
+#cut_modal{
+    position: absolute;
+    top: -2rem;
+    right: -1.3rem;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+
+#modalHeader{
+    grid-area: header;
+    padding: 1rem;
+    text-align: center;
+    color: #008A45;
+    background-color: #EFFFF4;
+    font-weight: 600;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.modalForm{grid-area: form;}
+#formSideSection{ grid-area: sideImg;}
+#modal{
+   border-radius: 8px;
+    display: grid;
+  grid-template-areas:
+    'header header'
+    'form sideImg';
+    gap: 1rem;
+    grid-column-gap: 2rem;
+    background: white;
+    padding-bottom: 2rem;
+}
+
+/* sign up and sign in   forms */
+
+.modalForm{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    justify-content: flex-start;
+}
+.modalForm>h1{
+    justify-self: left baseline;
+}
+#fname{grid-area: fname;}
+#lname{grid-area: lname;}
+#email_1{grid-area: email_1;}
+#password_box_1{grid-area: password_1;}
+#email_2{grid-area: email_2;}
+#password_box_2{grid-area: password_2;}
+#cpassword{grid-area: cpassword;}
+#signin_button{grid-area: submitBtn_2;}
+#signup_button{grid-area: submitBtn_1;}
+
+
+/* sign Up  form grid */
+#signUpForm form{
+    display: grid;
+    grid-template-areas: 
+    'fname lname'
+    'email_1 email_1'
+    'password_1 password_1'
+    'cpassword cpassword'
+    'submitBtn_1 submitBtn_1';
+    margin-top: 1rem;
+}
+
+/* sign In  form grid */
+#signInForm form{
+    display: grid;
+    grid-template-areas:
+    'email_2 email_2'
+    'password_2 password_2'
+    'submitBtn_2 submitBtn_2';
+    margin-top: 1rem;
+}
+
+#signUpForm form input,#signInForm form input{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: black;
+    border: 1px solid #D9D9DB;
+    padding: 1rem 0 1rem 0.5rem;
+    background-color: #F7F8FA;
+}
+#signUpForm form input::placeholder,#signInForm form input::placeholder{
+    color: #8A8A8A;
+}
+
+#signin_button, #signup_button{
+    background-color: #2F6CE5;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 1rem 0;
+    padding: 0.75rem 0;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+
+}
+#signin_button{
+    width: 100%;
+}
+#password_box_1,#password_box_2{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+    border: 1px solid #D9D9DB;
+    background-color: #F7F8FA;
+}
+#password_box_1>input,#password_box_2>input{
+    border: none !important;
+    width: -webkit-fill-available;;
+}
+.signUpOpt{
+    text-decoration: none;
+    text-align: center;
+    border: 0.6px solid #D9D9DB;
+    margin-top: 1rem;
+    padding: 0.75rem 0;
+}
+
+
+#formSideSection{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+#formSideSection span{
+    display: block;
+    text-align: end;
+}
+#formSideSection span span a{
+    text-decoration: none;
+    color: #2F6CE5;
+    font-weight: 600;
+}
+
+
+
+/* class to hide and show the modal */
+.hide{
+    display: none !important;
+}
+.show{
+   display: block !important;
+}

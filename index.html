@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATG.WORLD</title>
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/login_modal.css">
+
+    <link rel="stylesheet" href="./assets/css/style_responsive.css">
+</head>
+
+<body>
+
+    <header>
+        <nav id="navbar">
+            <a href="/"><img id="logo" src="./static/navbar/whole.png" alt="ATG.WORLD"></a>
+            <form id="navSearch" action="/" method="get">
+                <img src="./static/icons/searchVector.svg" alt="&#128269;">
+                <input type="text" placeholder="Search for your favorite groups in ATG">
+            </form>
+            <a id="loginStatus" href="#" onclick="login()">Create account. <span>It's free</span>
+                <img src="./static/icons/dropdownVector.svg" alt=""></a>
+        </nav>
+        <div id="homePageImg">
+            <!-- don't remove this empty div -->
+            <div></div>
+            <div id="img-overflow-text">
+                <h1>Computer Engineering</h1>
+                <p>142,765 Computer Engineers follow this</p>
+            </div>
+
+        </div>
+        <button id="leaveBtn">Leave Group</button>
+        <button id="mobJoinBtn" onclick=""><img src="./static/icons/pen.png" alt=""></button>
+
+    </header>
+
+    <!-- MODAL FOR LOGIN -->
+    <div id="outer_modal" class="hide">
+        <img id="cut_modal" src="./static/icons/cross.png" alt="" onclick="closeModal()">
+        <div id="modal">
+            <div id="modalHeader">Let's learn, share & inspire each other with our passion for computer engineering.
+                Sign up now 🤘🏼</div>
+            <div id="signUpForm" class="modalForm ">
+                <h1>Create Account</h1>
+                <form action="/" method="get">
+                    <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                    <input type="text" name="lname" id="lname" placeholder="Last Name" >
+                    <input type="email" name="email" id="email_1" placeholder="Email" required>
+                    <div id="password_box_1">
+                        <input type="password" name="password" id="password_1" placeholder="Password" required>
+                        <img  src="./static/icons/views.svg" alt="">
+                    </div>
+                    <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" required>
+                    <button type="submit" id="signup_button">Create Account</button>
+                </form>
+                <a class="signUpOpt" href="/"><img src="./static/icons/fb.svg" alt="">&nbsp; Sign up with Facebook</a>
+                <a class="signUpOpt" href="/"><img src="./static/icons/google.svg" alt="">&nbsp; Sign up with Google</a>
+            </div>
+
+            <div id="signInForm" class="modalForm hide">
+                <h1>Sign In</h1>
+                <form action="/" method="get">
+                    <input type="email" name="email" id="email_2" placeholder="Email" required>
+                    <div id="password_box_2">
+                        <input type="password" name="password" id="password_2" placeholder="Password" required>
+                        <img src="./static/icons/views.svg" alt="">
+                    </div>
+                    <button type="submit" id="signin_button">Sign In</button>
+                </form>
+                <a class="signUpOpt" href="/"><img src="./static/icons/fb.svg" alt="">&nbsp; Sign up with Facebook</a>
+                <a class="signUpOpt" href="/"><img src="./static/icons/google.svg" alt="">&nbsp; Sign up with Google</a>
+                <a class="signUpOpt" href="/">Forgot Password?</a>
+            </div>
+
+            <div id="formSideSection" class="formSideSection_ ">
+                <span class="side ">
+                    <span id="">Already have an account? <a href="#" onclick="changeForm()">Sign In</a></span>
+                </span>
+                <span class="side hide">
+                    <span id="">Don’t have an account yet? <a href="#" onclick="changeForm()">Create new for free!</a></span>
+                </span>
+                <img src="./static/modalImg.png" alt="" class="">
+            </div>
+
+        </div>
+
+    </div>
+
+
+     
+    <!-- CONTENT OF SITE -->
+
+    <div id="content">
+        <div id="inner_container_1">
+            <ul class="naviagtion_list">
+                <a href="/" class="naviagtion_list_item active-item">All Post(32)</a>
+                <a href="/" class="naviagtion_list_item">Article</a>
+                <a href="/" class="naviagtion_list_item">Event</a>
+                <a href="/" class="naviagtion_list_item">Education</a>
+                <a href="/" class="naviagtion_list_item">Job</a>
+            </ul>
+
+            <div id="writePostBtns">
+                <button id="writePostBtn">Write a Post <img src="./static/icons/dropdownVector.svg" alt=""></button>
+                <button id="joinBtn" onclick="login()"><img src="./static/join.svg" alt="" >Join Group</button>
+            </div>
+        </div>
+        <div id="mob_inner_container_1">
+            <span id="mob_post_count">Posts(386)</span>
+            <div class="dropmenu">
+                <button class="dropmenuBtn" onclick="toggleMenu()" class="">Filter: All<img src="./static/icons/dropdownVector.svg"
+                        alt=""></img></button>
+            </div>
+        </div>
+        <div id="inner_container_2">
+            <div class="post_container">
+                <div class="post">
+                    <img src="./static/post_img/post1.png" alt="post image">
+                    <div>
+                        <span class="post_type">✍️ Article</span>
+                        <span>
+                            <span class="post_title">What if famous brands had regular fonts? Meet RegulaBrands!</span>
+                            <div class="post_edit">
+                                <button onclick="toggleList(1)" class="post_edit_btn"><img src="./static/icons/dots.svg"
+                                        alt=""></img></button>
+                                <div class="edit_option_list">
+                                    <a href="/">Edit</a>
+                                    <a href="/">Report</a>
+                                    <a href="/">Option 3</a>
+                                </div>
+                            </div>
+
+
+                        </span>
+                        <span class="post_description">I’ve worked in UX for the better part of a decade. From now on, I
+                            plan to rei…</span>
+                        <span class="post_by_user">
+                            <span>
+                                <img src="./static/profile_img/progile1.png" alt="userphoto">
+                                <span class="user_name">Sarthak Kamra</span>
+                            </span>
+                            <span>
+                                <span class="view_count">
+                                    <img src="./static/icons/views.svg" alt="eyeIcon">
+                                    <span class="views">1.4k views</span>
+                                </span>
+                                <img src="./static/icons/share.svg" alt="share">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="./static/post_img/post2.png" alt="post image">
+                    <div>
+                        <span class="post_type">🔬️ Education</span>
+                        <span>
+                            <span class="post_title">Tax Benefits for Investment under National Pension Scheme launched
+                                by Government</span>
+                            <div class="post_edit">
+                                <button onclick="toggleList(2)" class="post_edit_btn"><img src="./static/icons/dots.svg"
+                                        alt=""></img></button>
+                                <div class="edit_option_list">
+                                    <a href="/">Edit</a>
+                                    <a href="/">Report</a>
+                                    <a href="/">Option 3</a>
+                                </div>
+                            </div>
+                        </span>
+                        <span class="post_description">I’ve worked in UX for the better part of a decade. From now on, I
+                            plan to rei…</span>
+                        <span class="post_by_user">
+                            <span>
+                                <img src="./static/profile_img/profile2.png" alt="userphoto">
+                                <span class="user_name">Sarthak Kamra</span>
+                            </span>
+                            <span>
+                                <span class="view_count">
+                                    <img src="./static/icons/views.svg" alt="eyeIcon">
+                                    <span class="views">1.4k views</span>
+                                </span>
+                                <img src="./static/icons/share.svg" alt="share">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="post">
+                    <img src="./static/post_img/post3.png" alt="post image">
+                    <div>
+                        <span class="post_type">🗓️ Meetup</span>
+                        <span>
+                            <span class="post_title">Finance & Investment Elite Social Mixer @Lujiazui</span>
+                            <div class="post_edit">
+                                <button onclick="toggleList(3)" class="post_edit_btn"><img src="./static/icons/dots.svg"
+                                        alt=""></img></button>
+                                <div class="edit_option_list">
+                                    <a href="/">Edit</a>
+                                    <a href="/">Report</a>
+                                    <a href="/">Option 3</a>
+                                </div>
+                            </div>
+                        </span>
+                        <span class="post_details_container">
+                            <span class="post_details">
+                                <span class="postDate">
+                                    <img src="./static/icons/calendar.svg" alt="">&nbsp;
+                                    Fri, 12 Oct,
+                                    2018</span>
+                                <span class="postLocation">
+                                    <img src="./static/icons/location.svg" alt=""> Ahmedabad, India</span>
+                            </span>
+                            <a class="post_website_link" href="/" style="color: #E56135;">Visit Website</a>
+                        </span>
+                        <span class="post_by_user">
+                            <span>
+                                <img src="./static/profile_img/profile3.png" alt="userphoto">
+                                <span class="user_name">Ronal Jones</span>
+                            </span>
+                            <span>
+                                <span class="view_count">
+                                    <img src="./static/icons/views.svg" alt="eyeIcon">
+                                    <span class="views">1.4k views</span>
+                                </span>
+                                <img src="./static/icons/share.svg" alt="share">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="post">
+                    <!-- <img src="./static/post_img/post3.png" alt="post image"> -->
+                    <div>
+                        <span class="post_type">💼️ Job</span>
+                        <span>
+                            <span class="post_title">Software Developer</span>
+                            <div class="post_edit">
+                                <button onclick="toggleList(4)" class="post_edit_btn"><img src="./static/icons/dots.svg"
+                                        alt=""></img></button>
+                                <div class="edit_option_list">
+                                    <a href="/">Edit</a>
+                                    <a href="/">Report</a>
+                                    <a href="/">Option 3</a>
+                                </div>
+                            </div>
+                        </span>
+                        <span class="post_details_container">
+                            <span class="post_details">
+                                <span class="postDate">
+                                    <img src="./static/icons/bag.svg" alt="">&nbsp;
+                                    Innovaccer Analytics Private Ltd.</span>
+                                <span class="postLocation">
+                                    <img src="./static/icons/location.svg" alt=""> Noida, India</span>
+                            </span>
+                            <a class="post_website_link" href="/" style="color: #02B875;">Apply on Timesjobs</a>
+                        </span>
+                        <span class="post_by_user">
+                            <span>
+                                <img src="./static/profile_img/profile3.png" alt="userphoto">
+                                <span class="user_name">Ronal Jones</span>
+                            </span>
+                            <span>
+                                <span class="view_count">
+                                    <img src="./static/icons/views.svg" alt="eyeIcon">
+                                    <span class="views">1.4k views</span>
+                                </span>
+                                <img src="./static/icons/share.svg" alt="share">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div id="groups_container">
+                <div id="groupFindInput">
+                    <img src="./static/icons/location.svg" alt="">
+                    <input type="text" placeholder="Enter your location ">
+                    <img src="./static/icons/pen.svg" alt="">
+                </div>
+                <div id="group_inp_des">
+                    <img src="./static/icons/info.svg" alt="">
+                    <span> Your location will help us serve better and
+                        extend a personalised experience.</span>
+                </div>
+                <div id="groups">
+                    <div>
+                        <img src="./static/icons/thumb.svg" alt="">
+                        <span>RECOMMENDED GROUPS</span>
+                    </div>
+                    <div class="groups_chat">
+                        <span><img src="./static/group_img/group1.png" alt="">
+                            <span>Leisure</span>
+                        </span>
+                        <button class="follow_btn followed" onclick="follow(1)">Followed</button>
+                    </div>
+                    <div class="groups_chat">
+                        <span><img src="./static/group_img/group2.png" alt="">
+                            <span>Activism</span>
+                        </span>
+                        <button class="follow_btn" onclick="follow(2)">Followed</button>
+                    </div>
+                    <div class="groups_chat">
+                        <span><img src="./static/group_img/group3.png" alt="">
+                            <span>MBA</span>
+                        </span>
+                        <button class="follow_btn" onclick="follow(3)">Followed</button>
+                    </div>
+                    <div class="groups_chat">
+                        <span><img src="./static/group_img/group4.png" alt="">
+                            <span>Philosophy</span>
+                        </span>
+                        <button class="follow_btn" onclick="follow(4)">Followed</button>
+                    </div>
+                    <a id="seemore_group" href="/">See More...</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

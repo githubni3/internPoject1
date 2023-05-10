@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* HOME PAGE IMAGE styling */
+#homePageImg{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    z-index: -1;
+    height: 30rem;
+    position: relative;
+    margin-top: 4.5rem;  /* giving margin because navbar is coming over it because the position of navbar is sticky   */
+}
+ #homePageImg div:first-child{
+    background: url('../../static/homePageBg.png') no-repeat center center/cover;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    opacity: 0.5;
+    /* position: relative; */
+}
+
+#img-overflow-text{
+    position: absolute;
+    left: 20%;
+    top: 70%;
+    opacity: 1;
+    color: white;
+}
+#img-overflow-text>h1{
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+#img-overflow-text>p{
+    font-weight: 400;
+    font-size: 1.15rem;
+}
+
+
+/* POST Container Styling */
+
+#content{
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    margin: auto;
+    margin-top: 2rem;
+    position: relative;
+}
+
+/* making the navigation list sticky */
+#inner_container_1{
+    position: sticky;
+    top: 4.5rem;
+    z-index: 11;
+    background: white;
+}
+/* conatiner for mobile */
+#mob_inner_container_1{
+    display: none !important;
+}
+/* making the group input and group chat sticky */
+#groups_container{
+    position: sticky;
+    top: 9rem;
+    z-index: 11;
+    background-color: white;
+    height: fit-content;
+}
+
+#content>div:first-child{
+    border-bottom: 1px solid #E0E0E0;
+    margin-bottom: 1rem
+}
+.naviagtion_list{
+    list-style: none;
+    display: flex;
+}
+.naviagtion_list_item{
+    padding: 1rem 1rem;
+    color: #8a8a8a;
+    cursor: pointer;
+    text-decoration: none;
+}
+.active-item{
+    color: #000;
+    border-bottom: 1px solid black;
+}
+#content>div{
+    display: flex;
+    justify-content: space-between;
+}
+#writePostBtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#writePostBtns button{    
+    border: none;
+    border-style: none;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#writePostBtns button:nth-child(1){
+    background-color: #EDEEF0;
+    color: #000;
+}
+#writePostBtns button:nth-child(2){
+    background-color: #2F6CE5;
+    color: white;
+}
+#writePostBtns button:nth-child(2) img{
+    margin-right: 6px;
+}
+
+/* button for mobile screen */
+#leaveBtn{
+    display: none;
+}
+
+#inner_container_2{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+
+/* POST container Styling */
+
+.post_container{
+    width: 60%;
+}
+#groups_container{
+    width: 25%;
+}
+
+/* POST cards styling */
+.post{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E0E0E0;
+    margin-top: 1rem;
+}
+.post>div{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.post>div span{
+    padding: 0.7rem;
+}
+.post_type{
+    font-style: Medium;
+font-size: 18px;
+}
+
+.post>div span:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.post_title{
+font-size: 22px;
+font-style: bold;
+font-weight: 600;
+}
+
+
+/* edit dropdown Button */
+.post_edit_btn {
+    background-color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* edit dropdown Button on hover  */
+  .post_edit_btn:hover, .post_edit_btn:focus {
+    background-color: #BFBFC0;
+    border-radius: 4px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .post_edit {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* dropdown option will bhi hidden initially*/
+  .edit_option_list {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.16);
+    z-index: 1;
+    right: 3rem;
+    background-color: white;    
+    border-radius: 4px;
+
+  }
+  
+  /* Links inside the dropdown */
+  .edit_option_list a {
+    color: #000;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* class for the dropdown menu we will add this class to the list using JS*/
+  .show {display:block;}
+
+
+.post_description{
+font-size: 19px;
+color: #5c5c5c;
+text-align: inherit;
+}
+.post_by_user{
+    display: flex;
+    justify-content: space-between;
+}
+.post_by_user span:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user_name{
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.post_by_user span:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post_by_user span:nth-child(2)>img{
+    padding: 10px;
+    background-color: #EDEEF0;
+    border-radius: 2px;
+}
+
+/* second type of card dont have the description part it has some other details */
+
+.post_details{
+    display: flex;
+    /* flex-direction: row; */
+    width: 100%;
+    align-items: center;
+}
+.postDate, .postLocation{
+    display: flex;
+    margin-right: 1rem;
+    width: 100%;
+     justify-content: flex-start !important;
+
+}
+.postLocation img{
+    width: fit-content;
+    margin-right: 1rem;
+}
+
+/* website link in post card */
+.post_website_link{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    /* color: #E56135;
+    color: #02B875; */
+    font-weight: 600;
+    text-align: center;
+    border: 0.7px solid #A9AEB8;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    
+}
+
+
+
+/*Styling for groups container   */
+
+#groups_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 1rem 0 0 3rem;
+}
+#groups_container>*{
+    width: 100%;
+}
+#groupFindInput{
+    margin-top: 3rem;
+    border-bottom: 0.4px solid #B8B8B8;
+    position: relative;
+    display: flex;
+}
+
+#groupFindInput input{
+    border: none;
+    color: black;
+    /* width: 100%; */
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    outline: none;
+}
+#groupFindInput input::placeholder{
+    color: #808080;
+}
+
+#groupFindInput img:last-child{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+/* group searching description */
+#group_inp_des{
+    color: #808080;
+    font-size: 12px;
+    margin-top: 1rem;
+}
+
+/* group chats styling */
+
+#groups{
+    margin-top: 3rem;
+}
+.groups_chat{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 50%;
+    margin: 2rem 0;
+}
+
+.groups_chat span{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.groups_chat span>*{
+    margin-right: 10px;
+}
+
+.follow_btn{
+    border-radius: 14px;
+    background-color: #EDEEF0;
+    padding: 0.25rem 0.75rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.followed{
+    color:white;
+    background-color: black;
+    cursor: pointer;
+}
+
+/* see more group link */
+#seemore_group{
+font-size: 12px;
+color: #2F6CE5;
+text-decoration: none;
+position: absolute;
+right: 0;
+}

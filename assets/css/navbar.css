@@ -1,0 +1,89 @@
+#navbar {
+  display: flex;
+  max-height: 72px;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  padding: 1rem;
+  background-color: white;
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#logo {
+  width: 162.57px;
+  height: 24px;
+  margin-left: 2rem;
+}
+
+#navSearch {
+  width: 360px;
+  height: 42px;
+  background: #f2f2f2;
+  border-radius: 21px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+#navSearch img {
+ margin-left: 1rem;
+}
+#navSearch input {
+  width: 242px;
+  font-weight: 600;
+  height: 19px;
+  color: black;
+  background: #f2f2f2;
+  border: none;
+  outline: none;
+ margin-left: 1rem;
+
+}
+#navSearch input::placeholder{
+  color: #5c5c5c;
+  font-size: 14px;
+}
+#loginStatus {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #2e2e2e;
+}
+#loginStatus span {
+  color: #2f6ce5;
+  font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+}
+
+
+
+/* responsive Part */
+
+@media screen and (max-width: 812px) {
+  #navSearch {
+    width: 254px;
+  }
+  #loginStatus {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  #navSearch input {
+    width: 198px;
+    margin-left: 0.5rem;
+}
+#navSearch img {
+  margin-left: 0.7rem;
+}
+#logo {
+  width: 129.57px;
+  margin-right: 0.7rem;
+  margin-left: 0;
+}
+
+}
