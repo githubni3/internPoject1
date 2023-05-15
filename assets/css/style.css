@@ -15,6 +15,13 @@
     position: relative;
     margin-top: 4.5rem;  /* giving margin because navbar is coming over it because the position of navbar is sticky   */
 }
+
+#homePageImg.blur{
+    filter: blur(10px);
+    user-select: none;
+    pointer-events: none;
+}
+
  #homePageImg div:first-child{
     background: url('../../static/homePageBg.png') no-repeat center center/cover;
     width: 100%;
@@ -50,6 +57,12 @@
     margin: auto;
     margin-top: 2rem;
     position: relative;
+}
+
+#content.blur{
+    filter: blur(10px);
+    user-select: none;
+    pointer-events: none;
 }
 
 /* making the navigation list sticky */
@@ -109,6 +122,12 @@
     cursor: pointer;
     border-radius: 4px;
 }
+
+/* join button for mobile screen */
+#mobJoinBtn{
+    display: none;
+}
+
 #writePostBtns button:nth-child(1){
     background-color: #EDEEF0;
     color: #000;
@@ -375,3 +394,12 @@ text-decoration: none;
 position: absolute;
 right: 0;
 }
+
+
+
+/* class to blur the content */
+/* .blur{
+    
+} */
+
+

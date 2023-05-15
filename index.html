@@ -22,7 +22,7 @@
                 <img src="./static/icons/searchVector.svg" alt="&#128269;">
                 <input type="text" placeholder="Search for your favorite groups in ATG">
             </form>
-            <a id="loginStatus" href="#" onclick="login()">Create account. <span>It's free</span>
+            <a id="loginStatus" href="/" onclick="login()">Create account. <span>It's free</span>
                 <img src="./static/icons/dropdownVector.svg" alt=""></a>
         </nav>
         <div id="homePageImg">
@@ -35,7 +35,7 @@
 
         </div>
         <button id="leaveBtn">Leave Group</button>
-        <button id="mobJoinBtn" onclick=""><img src="./static/icons/pen.png" alt=""></button>
+        <button id="mobJoinBtn" onclick="mob_login()"><img src="./static/icons/pen.png" alt=""></button>
 
     </header>
 
@@ -89,6 +89,53 @@
 
         </div>
 
+    </div>
+    
+
+    <!-- modal for mobile devices -->
+
+    <div id="mob_modal" class="" >
+        <div class="form_heading">
+            <h2 id="mob_form_title">Create Account</h2>
+            <img onclick="mob_login()" src="./static/icons/cross1.png" alt="">
+        </div>
+        <div id="signUpForm" class="modalForm mob_modalForm">
+            <form action="/" method="get">
+                <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                <input type="text" name="lname" id="lname" placeholder="Last Name" >
+                <input type="email" name="email" id="email_1" placeholder="Email" required>
+                <div id="password_box_1">
+                    <input type="password" name="password" id="password_1" placeholder="Password" required>
+                    <img  src="./static/icons/views.svg" alt="">
+                </div>
+                <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" required>
+                <div class="mob_form_btn">
+                    <button type="submit" id="signup_button">Create Account</button>
+                    <a class="form_for" onclick="mob_changeForm(0)">or, login</a>
+                </div>
+            </form>
+            <a class="signUpOpt" href="/"><img src="./static/icons/fb.svg" alt="">&nbsp; Sign up with Facebook</a>
+            <a class="signUpOpt" href="/"><img src="./static/icons/google.svg" alt="">&nbsp; Sign up with Google</a>
+        </div>
+        <div id="signInForm" class="modalForm mob_modalForm hide">
+            <form action="/" method="get">
+                <input type="email" name="email" id="email_2" placeholder="Email" required>
+                <div id="password_box_2">
+                    <input type="password" name="password" id="password_2" placeholder="Password" required>
+                    <img src="./static/icons/views.svg" alt="">
+                </div>
+                <div class="mob_form_btn">
+                    <button type="submit" id="signup_button">Sign In</button>
+                    <a class="form_for" onclick="mob_changeForm(1)">or, Create Account</a>
+                </div>
+            </form>
+            <a class="signUpOpt" href="/"><img src="./static/icons/fb.svg" alt="">&nbsp; Sign up with Facebook</a>
+            <a class="signUpOpt" href="/"><img src="./static/icons/google.svg" alt="">&nbsp; Sign up with Google</a>
+            <a class="signUpOpt" href="/">Forgot Password?</a>
+        </div>
+        <span>
+            By signing up, you agree to our Terms & conditions, Privacy policy
+        </span>
     </div>
 
 

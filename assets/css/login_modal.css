@@ -1,168 +1,384 @@
-
-#outer_modal{
-    position: sticky;
-    /* position: absolute; */
-   top: 50%;
-   left: 50%;
-   min-width: 45vw;
-   width: fit-content;
-   height: fit-content;
-   transform: translate(-50%, -50%);
-   z-index: 111111111;
-   background-color: white;
-   border-radius: 8px;
-   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
-   transition: all 0.5s ease-in;
-
+#outer_modal {
+  /* position: sticky; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+  height: fit-content;
+  transform: translate(-50%, -50%);
+  z-index: 111111111;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease-in;
 }
 
-#cut_modal{
-    position: absolute;
-    top: -2rem;
-    right: -1.3rem;
-    background-color: white;
-    border-radius: 2rem;
+#cut_modal {
+  position: absolute;
+  top: -2rem;
+  right: -1.3rem;
+  background-color: white;
+  border-radius: 2rem;
 }
 
-
-#modalHeader{
-    grid-area: header;
-    padding: 1rem;
-    text-align: center;
-    color: #008A45;
-    background-color: #EFFFF4;
-    font-weight: 600;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+#modalHeader {
+  grid-area: header;
+  padding: 1rem;
+  text-align: center;
+  color: #008a45;
+  background-color: #effff4;
+  font-weight: 600;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
-.modalForm{grid-area: form;}
-#formSideSection{ grid-area: sideImg;}
-#modal{
-   border-radius: 8px;
-    display: grid;
+.modalForm {
+  grid-area: form;
+}
+#formSideSection {
+  grid-area: sideImg;
+}
+#modal {
+  border-radius: 8px;
+  display: grid;
   grid-template-areas:
-    'header header'
-    'form sideImg';
-    gap: 1rem;
-    grid-column-gap: 2rem;
-    background: white;
-    padding-bottom: 2rem;
+    "header header"
+    "form sideImg";
+  gap: 1rem;
+  grid-column-gap: 2rem;
+  background: white;
+  padding-bottom: 2rem;
 }
 
 /* sign up and sign in   forms */
 
-.modalForm{
-    display: flex;
-    flex-direction: column;
-    margin-left: 2rem;
-    justify-content: flex-start;
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  justify-content: flex-start;
 }
-.modalForm>h1{
-    justify-self: left baseline;
+.modalForm > h1 {
+  justify-self: left baseline;
 }
-#fname{grid-area: fname;}
-#lname{grid-area: lname;}
-#email_1{grid-area: email_1;}
-#password_box_1{grid-area: password_1;}
-#email_2{grid-area: email_2;}
-#password_box_2{grid-area: password_2;}
-#cpassword{grid-area: cpassword;}
-#signin_button{grid-area: submitBtn_2;}
-#signup_button{grid-area: submitBtn_1;}
-
+#fname {
+  grid-area: fname;
+}
+#lname {
+  grid-area: lname;
+}
+#email_1 {
+  grid-area: email_1;
+}
+#password_box_1 {
+  grid-area: password_1;
+}
+#email_2 {
+  grid-area: email_2;
+}
+#password_box_2 {
+  grid-area: password_2;
+}
+#cpassword {
+  grid-area: cpassword;
+}
+#signin_button {
+  grid-area: submitBtn_2;
+}
+#signup_button {
+  grid-area: submitBtn_1;
+}
 
 /* sign Up  form grid */
-#signUpForm form{
-    display: grid;
-    grid-template-areas: 
-    'fname lname'
-    'email_1 email_1'
-    'password_1 password_1'
-    'cpassword cpassword'
-    'submitBtn_1 submitBtn_1';
-    margin-top: 1rem;
+#signUpForm form {
+  display: grid;
+  grid-template-areas:
+    "fname lname"
+    "email_1 email_1"
+    "password_1 password_1"
+    "cpassword cpassword"
+    "submitBtn_1 submitBtn_1";
+  margin-top: 1rem;
 }
 
 /* sign In  form grid */
-#signInForm form{
-    display: grid;
-    grid-template-areas:
-    'email_2 email_2'
-    'password_2 password_2'
-    'submitBtn_2 submitBtn_2';
-    margin-top: 1rem;
+#signInForm form {
+  display: grid;
+  grid-template-areas:
+    "email_2 email_2"
+    "password_2 password_2"
+    "submitBtn_2 submitBtn_2";
+  margin-top: 1rem;
 }
 
-#signUpForm form input,#signInForm form input{
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    color: black;
-    border: 1px solid #D9D9DB;
-    padding: 1rem 0 1rem 0.5rem;
-    background-color: #F7F8FA;
+#signUpForm form input,
+#signInForm form input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: black;
+  border: 1px solid #d9d9db;
+  padding: 1rem 0 1rem 0.5rem;
+  background-color: #f7f8fa;
 }
-#signUpForm form input::placeholder,#signInForm form input::placeholder{
-    color: #8A8A8A;
-}
-
-#signin_button, #signup_button{
-    background-color: #2F6CE5;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    margin: 1rem 0;
-    padding: 0.75rem 0;
-    outline: none;
-    border: none;
-    border-radius: 20px;
-
-}
-#signin_button{
-    width: 100%;
-}
-#password_box_1,#password_box_2{
-    display: flex;
-    justify-content: space-between;
-    padding-right: 1rem;
-    border: 1px solid #D9D9DB;
-    background-color: #F7F8FA;
-}
-#password_box_1>input,#password_box_2>input{
-    border: none !important;
-    width: -webkit-fill-available;;
-}
-.signUpOpt{
-    text-decoration: none;
-    text-align: center;
-    border: 0.6px solid #D9D9DB;
-    margin-top: 1rem;
-    padding: 0.75rem 0;
+#signUpForm form input::placeholder,
+#signInForm form input::placeholder {
+  color: #8a8a8a;
 }
 
-
-#formSideSection{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    margin-right: 2rem;
+#signin_button,
+#signup_button {
+  background-color: #2f6ce5;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 1rem 0;
+  padding: 0.75rem 0;
+  outline: none;
+  border: none;
+  border-radius: 20px;
 }
-#formSideSection span{
-    display: block;
-    text-align: end;
+#signin_button {
+  width: 100%;
 }
-#formSideSection span span a{
-    text-decoration: none;
-    color: #2F6CE5;
-    font-weight: 600;
+#password_box_1,
+#password_box_2 {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+  border: 1px solid #d9d9db;
+  background-color: #f7f8fa;
+}
+#password_box_1 > input,
+#password_box_2 > input {
+  border: none !important;
+  width: -webkit-fill-available;
+}
+.signUpOpt {
+  text-decoration: none;
+  text-align: center;
+  border: 0.6px solid #d9d9db;
+  margin-top: 1rem;
+  padding: 0.75rem 0;
 }
 
-
+#formSideSection {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+#formSideSection span {
+  display: block;
+  text-align: end;
+}
+#formSideSection img{
+    width: auto;
+}
+#formSideSection span span a {
+  text-decoration: none;
+  color: #2f6ce5;
+  font-weight: 600;
+}
 
 /* class to hide and show the modal */
-.hide{
-    display: none !important;
+.hide {
+  /* display: none !important; */
+  visibility: hidden;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
 }
-.show{
-   display: block !important;
+
+.show {
+  /* display: block !important; */
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1440px) {
+    #modal {
+        gap: 0rem;
+        grid-column-gap: 0;
+        padding-bottom: 0;
+    }
+    .modalForm {
+        margin-left: 1rem;
+    }
+    #formSideSection {
+        margin-right: 1rem;
+    }
+    #formSideSection img {
+        width: 450px !important;
+    }
+    
+}
+@media screen and (max-width: 1200px) {
+    #signUpForm form input, #signInForm form input {
+        padding: 0.5rem 0 0.5rem 0.5rem;
+    }
+    #signin_button, #signup_button {
+        margin: 0.5rem 0;
+        padding: 0.375rem 0;
+    }
+    .signUpOpt {
+        margin-top: 0.5rem;
+        padding: 0.375rem 0;
+    }
+    #formSideSection img {
+        width: 350px !important;
+    }
+}
+
+@media screen and (max-width: 838px) {
+    #modal {
+        padding-bottom: 1rem;
+    }
+    #signUpForm form input, #signInForm form input {
+        padding: 0.25rem 0 0.3rem 0.25rem;
+    }
+    #formSideSection img {
+        width: 250px !important;
+    }
+}
+
+@media screen and (max-width: 676px) {
+    #modal {
+        grid-template-areas:
+          "header"
+          "form"
+          "sideImg";
+      }
+      #formSideSection img {
+    display: none;
+    }
+    .modalForm {
+        margin: 1rem 1rem 0 1rem;
+    }
+    #formSideSection span {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* creating login popup for mobile devices */
+
+#mob_modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    padding-bottom: 5rem;
+    border-radius: 24px 24px 0 0 ;
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.08);
+    display: none;
+    opacity: 0;
+    transform: translateY(50vh);
+    z-index: -1;
+    transition: all 0.3s ease-in;
+}
+
+.form_heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: -webkit-fill-available;
+}
+.mob_form_btn{grid-area: form_btn;}
+
+#signUpForm form {
+    grid-template-areas:
+      "fname lname"
+      "email_1 email_1"
+      "password_1 password_1"
+      "cpassword cpassword"
+      "form_btn form_btn";
+    margin-top: 1rem;
+
+  }
+
+  #signInForm form {
+    grid-template-areas:
+      "email_2 email_2"
+      "password_2 password_2"
+      "form_btn form_btn";
+    margin-top: 1rem;
+  }
+
+  .mob_modalForm{
+    width: -webkit-fill-available;
+  }
+
+  .mob_form_btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #signup_button{
+    padding: 0.6rem 2rem;
+  }
+  .form_for{
+    text-decoration: underline;
+    color: #495057;
+    ;
+  }
+
+  #mob_modal > *:last-child{
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .show_mob_modal{ 
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+  }
+
+@media screen and (max-width: 582px) {
+    #mob_modal{
+        display: flex;
+    }
+    #outer_modal{
+        display: none;
+    }
+    #signUpForm form input, #signInForm form input {
+        padding: 0.5rem 0 0.5rem 0.25rem;
+    }
+}
+@media screen and (max-width: 482px) {
+    #mob_modal {
+        width: -webkit-fill-available;
+    }
+    #signUpForm{
+        width: unset;
+    }
+    .modalForm form{
+        width: -webkit-fill-available;
+    }
+    .signUpOpt{
+        width: auto !important;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .signUpOpt{
+        width: auto !important;
+    }
+    #mob_modal{
+        padding-bottom: 1rem;
+    }
+    .mob_modalForm form > *{
+        width: 100%;
+    }
+    #password_box_1{
+        width: 96.2%;
+    }
 }

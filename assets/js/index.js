@@ -52,11 +52,15 @@ function enableScroll() {
 
 const closeModal =()=>{
   document.getElementById('outer_modal').classList.replace('show','hide');
+  document.getElementById('homePageImg').classList.toggle('blur');
+  document.getElementById('content').classList.toggle('blur');
   enableScroll();
 }
 
 const login = ()=>{
   document.getElementById('outer_modal').classList.replace('hide','show');
+  document.getElementById('homePageImg').classList.toggle('blur');
+  document.getElementById('content').classList.toggle('blur');
   disableScroll();
 }
 
@@ -84,4 +88,31 @@ const changeForm = ()=>{
 
 const toggleMenu = ()=>{
   document.getElementsByClassName("drop_list")[0].classList.toggle("show");
+}
+
+
+// funtion for closing and opting the form modal on mobile device
+
+const close_mob_login = () =>{
+  document.getElementById("mob_modal").classList.toggle('show_mob_modal')
+}
+const mob_login = () =>{
+  document.getElementById("mob_modal").classList.toggle('show_mob_modal')
+}
+
+
+
+// funtion to change the signiup and signin forms in mobile device
+
+const mob_changeForm = (n)=>{
+  const forms = document.getElementsByClassName('mob_modalForm');
+  forms[0].classList.toggle('hide');
+  forms[1].classList.toggle('hide');
+  if(n===1){
+    document.getElementById('mob_form_title').innerHTML = 'Welcome back!'
+  }
+  else{
+    document.getElementById('mob_form_title').innerHTML = 'Create Account'
+
+  }
 }
