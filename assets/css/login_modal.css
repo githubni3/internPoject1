@@ -265,6 +265,9 @@
 /* creating login popup for mobile devices */
 
 
+#mon_modal{
+  display: none;
+}
 
 @media screen and (max-width: 582px) {
   #mob_modal{
