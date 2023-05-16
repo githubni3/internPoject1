@@ -264,7 +264,10 @@
 
 /* creating login popup for mobile devices */
 
-#mob_modal{
+
+
+@media screen and (max-width: 582px) {
+  #mob_modal{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -341,8 +344,6 @@
     opacity: 1 !important;
     z-index: 1 !important;
   }
-
-@media screen and (max-width: 582px) {
     #mob_modal{
         display: flex;
     }
