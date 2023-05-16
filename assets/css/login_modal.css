@@ -264,43 +264,41 @@
 
 /* creating login popup for mobile devices */
 
-
-#mon_modal{
+#mob_modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  padding-bottom: 5rem;
+  border-radius: 24px 24px 0 0 ;
+  background-color: white;
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.08);
   display: none;
-}
-
-@media screen and (max-width: 582px) {
-  #mob_modal{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 1rem;
-    padding-bottom: 5rem;
-    border-radius: 24px 24px 0 0 ;
-    background-color: white;
-    z-index: 1;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.08);
-    display: none;
-    opacity: 0;
-    transform: translateY(50vh);
-    z-index: -1;
-    transition: all 0.3s ease-in;
+  opacity: 0;
+  transform: translateY(50vh);
+  z-index: -1;
+  transition: all 0.3s ease-in;
 }
 
 .form_heading{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: -webkit-fill-available;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: -webkit-fill-available;
 }
+
+
+
+@media screen and (max-width: 582px) {
 .mob_form_btn{grid-area: form_btn;}
 
-#signUpForm form {
+  #signUpForm form {
     grid-template-areas:
       "fname lname"
       "email_1 email_1"
@@ -308,9 +306,9 @@
       "cpassword cpassword"
       "form_btn form_btn";
     margin-top: 1rem;
-
+  
   }
-
+  
   #signInForm form {
     grid-template-areas:
       "email_2 email_2"
@@ -318,11 +316,11 @@
       "form_btn form_btn";
     margin-top: 1rem;
   }
-
+  
   .mob_modalForm{
     width: -webkit-fill-available;
   }
-
+  
   .mob_form_btn{
     display: flex;
     justify-content: space-between;
@@ -336,12 +334,12 @@
     color: #495057;
     ;
   }
-
+  
   #mob_modal > *:last-child{
     margin-top: 1.5rem;
     text-align: center;
   }
-
+  
   .show_mob_modal{ 
     transform: translateY(0) !important;
     opacity: 1 !important;
